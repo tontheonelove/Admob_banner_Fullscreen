@@ -41,6 +41,20 @@ public class MainActivity extends AppCompatActivity {
 
         // Prepare the Interstitial Ad
         interstitial = new InterstitialAd(MainActivity.this);
+        
+        
+        /// This is Admob Show
+                    interstitial = new InterstitialAd(getApplicationContext());
+                    interstitial.setAdUnitId(getString(R.string.admob_interstetial_ad));
+                    AdRequest adRequest = new AdRequest.Builder().build();
+                    interstitial.loadAd(adRequest);
+                    interstitial.setAdListener(new AdListener() {
+                        public void onAdLoaded() {
+                            if (interstitial.isLoaded()) {
+                                interstitial.show();
+                            }
+                        }
+                    });
 
 
         /**
@@ -85,6 +99,13 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     });
+                    
+                    
+                    /// ADMOB  BANNER FOOTER///
+                     mAdView = (AdView) findViewById(R.id.adView);
+                     AdRequest adRequestbn = new AdRequest.Builder()
+                              .build();
+                     mAdView.loadAd(adRequestbn);
 
 
 
