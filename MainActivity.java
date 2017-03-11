@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private InterstitialAd interstitial;
-
+    private AdView mAdView;
 
 
 
