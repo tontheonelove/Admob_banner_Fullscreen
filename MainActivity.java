@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout layout = (RelativeLayout)findViewById(R.id.ad_publi);
 
         AdView adView = new AdView(this);
-        adView.setAdUnitId("ca-app-pub-3141495266234720/8113582493");
+        adView.setAdUnitId("ca-app-pub-3141495266234720/xxxxxxxxxx");
 
         adView.setAdSize(AdSize.SMART_BANNER);
 
@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
     private void interstitialAdLaunch()
     {
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-3141495266234720/8113582493");
+        interstitialAd.setAdUnitId("ca-app-pub-3141495266234720/xxxxxxxxxx");
 
         interstitialAd.setAdListener(new AdListener() {
             @Override
